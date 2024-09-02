@@ -7,9 +7,9 @@ Esta en preparacion, esto es solo el comienzo del Simulador.
 
 Para su uso deberan ingresar uno de los siguientes nombres:
 
-ADMIN
-JUAN
-MARIA
+ADMIN<br>
+JUAN<br>
+MARIA<br>
 NICOLAS
 
 Una vez adentro podran optar por 
