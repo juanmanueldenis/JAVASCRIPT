@@ -7,7 +7,7 @@ const productos = [
     { id: 5, nombre: "Queso", precio: 1100, imagen: "SOURCE/queso.png" },
     { id: 6, nombre: "Yogurt", precio: 1300, imagen: "SOURCE/yogurt.png" },
     { id: 7, nombre: "Pollo", precio: 7000, imagen: "SOURCE/pollo.png" },
-    { id: 8, nombre: "1kg Carne Envasada", precio: 12000, imagen: "SOURCE/carne.png" },
+    { id: 8, nombre: "1kg Carne ", precio: 12000, imagen: "SOURCE/carne.png" },
     { id: 9, nombre: "Cereal", precio: 1650, imagen: "SOURCE/cereal.png" },
     { id: 10, nombre: "Tomates", precio: 1000, imagen: "SOURCE/tomate.png"}
 ];
