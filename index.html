@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercadito de Barrio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Mercadito de Barrio</h1>
+
+    <!-- Productos -->
+    <div id="productos">
+        <h2>Productos Disponibles</h2>
+        <div id="productos-lista"></div>
+    </div>
+
+    <!-- Carrito -->
+    <div id="carrito">
+        <h2>Tu Carrito</h2>
+        <ul id="carrito-lista"></ul>
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        <button onclick="reiniciarCarrito()">Reiniciar Carrito</button> 
+    </div>
+
+    <!-- Cupón de descuento -->
+    <div id="cupones">
+        <h3>Aplicar cupón de descuento</h3>
+        <input type="text" id="cupon" placeholder="Introduce un cupón">
+        <button onclick="aplicarCupon()">Aplicar</button>
+        <p>Descuento aplicado: <span id="descuento">0%</span></p>
+        <p>Total con descuento: $<span id="total">0.00</span></p>
+        <p>Descuento aplicado: $<span id="Ahorro">0</span></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
