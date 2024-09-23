@@ -11,5 +11,5 @@ Este proyecto trata de simular un mercadito de barrio, el cual te permite genera
 
 <h3>CUPONES</h3>
 
-10%  - "DESCUENTO10"
+10%  - "DESCUENTO10"<br>
 25%  - "DESCUENTO25"
