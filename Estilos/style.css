@@ -1,0 +1,324 @@
+/* Resetear algunos estilos predeterminados del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+#productos, #carrito, #cupones {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Contenedor de productos */
+#productos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+#productos-lista div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#productos-lista div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#productos-lista p {
+    margin-bottom: 10px;
+}
+
+#productos-lista img {
+    width: 100%;
+    height:120px;
+    object-fit: fill;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el contenedor del carrito */
+#carrito {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+
+#carrito h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Lista de productos del carrito */
+#carrito-lista {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+/* Estilos para cada elemento del carrito */
+#carrito-lista li {
+    display: flex; /* Usar flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuir los elementos uniformemente */
+    align-items: center; /* Alinear verticalmente al centro */
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+/* Contenedor para los controles de cantidad */
+.cantidad-controles {
+    display: flex; /* Alinear los controles en fila */
+    align-items: center; /* Centrar los elementos verticalmente */
+    margin-right: 10px;
+}
+
+/* Botón de incremento y decremento */
+.btn-mas, .btn-menos {
+    width: 30px; /* Ancho de los botones */
+    height: 30px; /* Alto de los botones */
+    border: none; /* Sin borde */
+    background-color: #e7e7e7; /* Color de fondo de los botones */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    margin: 0 5px; /* Separación entre botones */
+    font-size: 18px; /* Tamaño de letra */
+    color: #333; /* Color de texto */
+    border-radius: 4px; /* Borde redondeado */
+    transition: background 0.3s ease; /* Transición suave en hover */
+}
+
+.btn-mas:hover, .btn-menos:hover {
+    background-color: #ddd; /* Cambiar el color de fondo al pasar el ratón */
+}
+
+/* Mostrar la cantidad de productos */
+.cantidad {
+    width: 40px; /* Ancho del contenedor */
+    text-align: center; /* Centrar el texto */
+    font-weight: bold; /* Letra en negrita */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilos para el subtotal */
+#subtotal {
+    font-weight: bold; /* Letra en negrita */
+    font-size: 18px; /* Tamaño de letra */
+}
+
+/* Estilo para el botón de reiniciar carrito */
+#reiniciar-carrito-btn {
+    display: block;
+    width: 100%; /* Que ocupe todo el ancho */
+    margin-top: 15px;
+    padding: 10px;
+    background: #3498db; /* Color de fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Mostrar cursor de puntero */
+    border-radius: 4px; /* Borde redondeado */
+    transition: background 0.3s ease; /* Transición suave en hover */
+}
+
+#reiniciar-carrito-btn:hover {
+    background: #2980b9; /* Cambiar el color de fondo al pasar el ratón */
+}
+
+
+/* Sección de resumen */
+#subtotal, #total, #descuento, #Ahorro {
+    font-weight: bold;
+}
+
+p {
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+/* Botón reiniciar carrito */
+button#reiniciarCarrito {
+    background-color: #f44336;
+    margin-top: 10px;
+}
+
+button#reiniciarCarrito:hover {
+    background-color: #e53935;
+}
+
+#totaltotal{
+    
+    border: 2px solid #0d3a0d;
+     padding: 5px;
+     background-color: #aae798;
+     border-radius: 5px;
+     width: 30%;
+}
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input {
+    margin: 10px 0;
+}
+
+/* Contenedor principal del resumen-compra */
+#resumen-compra {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px dashed #4CAF50; /* Borde tipo resumen-compra */
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto; /* Centrar en la pantalla */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del resumen-compra */
+#resumen-compra h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Información del usuario */
+.resumen-compra-info {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Lista de productos */
+.resumen-compra-productos {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.resumen-compra-productos li {
+    border-bottom: 1px dotted #ddd;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumen-compra-productos li span {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Total */
+#resumen-compra-total {
+    font-size: 1.2em;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
+/* Detalle final */
+.resumen-compra-footer {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin-top: 20px;
+    border-top: 1px dashed #ddd;
+    padding-top: 10px;
+}
+
+/* Botón de cierre del modal */
+#cerrar-resumen-compra-btn {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cerrar-resumen-compra-btn:hover {
+    background-color: #e53935;
+}
