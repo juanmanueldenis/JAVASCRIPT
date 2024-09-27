@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercadito de Barrio</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <h1>Mercadito de Barrio</h1>
@@ -17,22 +16,55 @@
     </div>
 
     <!-- Carrito -->
-    <div id="carrito">
-        <h2>Tu Carrito</h2>
-        <ul id="carrito-lista"></ul>
-        <p>Subtotal: $<span id="subtotal">0.00</span></p>
-        <button onclick="reiniciarCarrito()">Reiniciar Carrito</button> 
-    </div>
+<div id="carrito">
+    <h2>Tu Carrito</h2>
+    <ul id="carrito-lista"></ul>
+    <p>Subtotal: $<span id="subtotal">0.00</span></p>
+    <button id="reiniciar-carrito-btn">Reiniciar Carrito</button>
+
+</div>
 
     <!-- Cupón de descuento -->
     <div id="cupones">
         <h3>Aplicar cupón de descuento</h3>
         <input type="text" id="cupon" placeholder="Introduce un cupón">
-        <button onclick="aplicarCupon()">Aplicar</button>
+        <button id="aplicar-cupon-btn">Aplicar</button>
         <p>Descuento aplicado: <span id="descuento">0%</span></p>
         <p>Ahorro: $<span id="Ahorro">0</span></p>
         <p id="totaltotal">Total con descuento: <span id="total">0.00</span></p>
     </div>
+
+<div id="fincompra">
+    <button id="finalizar-compra-btn">Finalizar Compra</button> <!-- Nuevo botón -->
+
+</div>
+    
+    <div id="resumen-compra" style="display: none;">
+        <h2>Resumen de Compra</h2>
+        <p id="resumen-usuario"></p>
+        <ul id="resumen-productos"></ul>
+        <p>Total a pagar: $<span id="total-resumen"></span></p>
+    </div>
+    
+
+    <!-- Modal de Finalizar Compra -->
+<div id="modal-compra" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Ingrese sus datos para finalizar la compra</h2>
+        <form id="form-datos">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" required><br>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" required><br>
+            <label for="domicilio">Domicilio:</label><br>
+            <input type="text" id="domicilio" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" required><br><br>
+            <button type="submit" id="confirmar-compra-btn">Confirmar Compra</button>
+        </form>
+    </div>
+</div>
 
     <script src="app.js"></script>
 </body>
